@@ -1,6 +1,8 @@
 # API-Proxy-Server
 A proxy server that intercepts requests to OpenWeatherMap and implements rate limiting and caching
 
+## Rate Limiting
+
 ### What is Rate Limiting A.K.A Throttling
 Rate Limiting is a technique which allows a service to control consumption of its resources, used by an individual user or any other service.
 
@@ -36,3 +38,35 @@ Requests can be identified with the help of `API_KEYS, IP_ADDRESS, USER_ID, SERV
 
 ### Error Code
 Error Code 429 - `TOO MANY REQUESTS`
+
+## Proxy Server
+
+![image](https://user-images.githubusercontent.com/41284892/140295287-faa232df-c0ee-4f93-8d4b-5df4ce63b269.png)
+
+### Forward Proxy
+
+The proxy event, in this case, is that the "forward proxy" retrieves data from another web site on behalf of the original requestee.
+The Server doesn't know the actual Client
+
+### Proxy Uses:-
+- Caching
+- Anonimity
+- Logging
+- Blocking Sites
+
+### Reverse Proxy
+
+The proxy event, in this case, is that the "reverse proxy" responds/sends data to client on behalf of the original servers.
+The Client doesn't know the actual Server.
+
+### Reverse Proxy Uses:-
+- Caching
+- Logging
+- Load Balancing
+- Rate Limiting
+- CDN reverse proxy
+- Canary Deployment (Beta Testing)
+- Ingress Controller (Deciding which server to direct on the basis of route)
+
+
+
